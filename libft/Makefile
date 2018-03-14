@@ -6,7 +6,7 @@
 #    By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/14 12:32:50 by tmerli            #+#    #+#              #
-#    Updated: 2018/03/14 12:32:54 by tmerli           ###   ########.fr        #
+#    Updated: 2018/03/14 12:46:18 by tmerli           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ SRC = ft_atoi.c\
 	  ft_memalloc.c\
 	  ft_memmove.c\
 	  ft_putnbr.c\
-	  ft_putnbrdl\
+	  ft_putnbrdl.c\
 	  ft_strclr.c\
 	  ft_striter.c\
 	  ft_strmapi.c\

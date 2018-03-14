@@ -6,9 +6,13 @@
 #    By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/18 16:12:14 by tmerli            #+#    #+#              #
-#    Updated: 2017/12/18 17:09:49 by tmerli           ###   ########.fr        #
+#    Updated: 2018/03/14 12:46:44 by tmerli           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+LIB=libft.a
+
+LIBPATH=../libft/
 
 NAME = fdf
 
@@ -25,16 +29,16 @@ FLAGS = -Wall -Wextra -Werror
 all : $(NAME)
 
 $(NAME) : $(HEAD) $(SRC)
-	make -C libft
+	make -C $(LIBPATH)
 	make -C minilibx_macos
-	gcc $(FLAGS) -o $(NAME) $(SRC) libft/libft.a -Lminilibx_macos -lmlx -framework OpenGL -framework Appkit
+	gcc $(FLAGS) -o $(NAME) $(SRC) $(LIBPATH)$(LIB) -Lminilibx_macos -lmlx -framework OpenGL -framework Appkit
 
 clean :
-	make clean -C libft
+	make clean -C $(LIBPATH)
 	make clean -C minilibx_macos
 
 fclean: clean
 	rm -f $(NAME)
-	make fclean -C libft
+	rm -f $(LIBPATH)$(LIB)
 
 re : fclean all
