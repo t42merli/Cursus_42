@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmerli <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:44:05 by tmerli            #+#    #+#             */
 /*   Updated: 2017/11/16 13:06:32 by tmerli           ###   ########.fr       */

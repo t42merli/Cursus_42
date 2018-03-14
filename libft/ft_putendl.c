@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmerli <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 14:06:19 by tmerli            #+#    #+#             */
 /*   Updated: 2017/11/16 13:51:23 by tmerli           ###   ########.fr       */

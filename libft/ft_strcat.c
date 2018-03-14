@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmerli <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:13:36 by tmerli            #+#    #+#             */
 /*   Updated: 2017/12/03 13:54:14 by tmerli           ###   ########.fr       */

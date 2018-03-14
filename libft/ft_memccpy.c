@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmerli <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 11:52:45 by tmerli            #+#    #+#             */
 /*   Updated: 2017/11/16 12:07:57 by tmerli           ###   ########.fr       */

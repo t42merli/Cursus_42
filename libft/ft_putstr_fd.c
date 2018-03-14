@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmerli <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 14:02:04 by tmerli            #+#    #+#             */
 /*   Updated: 2017/11/16 15:25:15 by tmerli           ###   ########.fr       */

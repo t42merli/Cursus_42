@@ -6,7 +6,7 @@
 /*   By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/19 05:57:26 by tmerli            #+#    #+#             */
-/*   Updated: 2018/02/15 17:51:48 by tmerli           ###   ########.fr       */
+/*   Updated: 2018/02/28 03:04:48 by tmerli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ int		main(int argc, char **argv)
 	t_stack		*b;
 	t_move		*moves;
 
+	moves = NULL;
 	add_move(&moves, "start:");
 	a = NULL;
 	b = NULL;
@@ -80,15 +81,13 @@ int		main(int argc, char **argv)
 			return (0);
 	}
 	else
-	{
-		ft_putendl("usage");
 		return (0);
-	}
 	if (stack_size(a) > 30)
 		get_sort_a(&a, &b, moves);
 	else
-		small_sort(a, b);
+		small_sort(&a, &b, moves);
 	check_put(moves);
 	free_stack(a);
+	free_stack(b);
 	return (0);
 }

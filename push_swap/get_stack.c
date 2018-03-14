@@ -6,7 +6,7 @@
 /*   By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 19:03:19 by tmerli            #+#    #+#             */
-/*   Updated: 2018/02/15 05:04:11 by tmerli           ###   ########.fr       */
+/*   Updated: 2018/02/28 05:11:17 by tmerli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,17 +85,17 @@ t_stack		*fill_stack(char **argv)
 
 t_stack		*get_stack(int argc, char **argv)
 {
-	int		i;
 	t_stack	*stack;
+	char	**av;
 
-	i = 0;
 	stack = NULL;
-	if (!(argv = get_arg(argc, argv)))
+	if (!(av = get_arg(argc, argv)))
 		return (NULL);
-	while (argv[i])
-		i++;
-	if (!(stack = fill_stack(argv)))
+	if (!(stack = fill_stack(av)))
+	{
+		ft_free((void**)av);
 		return (NULL);
-	ft_free((void**)argv);
+	}
+	ft_free((void**)av);
 	return (stack);
 }

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmerli <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:37:04 by tmerli            #+#    #+#             */
 /*   Updated: 2017/11/08 17:50:32 by tmerli           ###   ########.fr       */

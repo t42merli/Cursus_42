@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmerli <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 18:46:45 by tmerli            #+#    #+#             */
-/*   Updated: 2017/12/19 19:46:02 by tmerli           ###   ########.fr       */
+/*   Created: 2018/03/14 12:32:38 by tmerli            #+#    #+#             */
+/*   Updated: 2018/03/14 12:32:40 by tmerli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+void			ft_putnbrdl(int nb);
+int				ft_abs(int nb);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 char			*ft_strtrim(char const *s);

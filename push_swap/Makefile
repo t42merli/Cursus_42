@@ -6,7 +6,7 @@
 #    By: tmerli <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 16:38:31 by tmerli            #+#    #+#              #
-#    Updated: 2018/02/20 01:29:15 by tmerli           ###   ########.fr        #
+#    Updated: 2018/02/28 04:21:53 by tmerli           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ SRC = get_next_line.c\
 	  ft_free.c\
 	  small_sort.c\
 
-LIBPATH = ../libft/
+LIBPATH = libft/
 
 LIB = libft.a
 
@@ -45,10 +45,12 @@ CC= gcc
 
 OBJ = $(SRC:.c=.o)
 
-all : $(NAME)
+all : $(LIB) $(NAME)
+
+$(LIB) :
+	make -C $(LIBPATH)
 
 $(NAME) : $(SRC) $(HEADER) $(PUSH_SWAP) $(CHECKER)
-	make -C $(LIBPATH)
 	$(CC) -c $(FLAGS) $(SRC)
 	$(CC) -o $(NAME) $(OBJ) $(LIBPATH)$(LIB) $(PUSH_SWAP)
 	$(CC) -o $(NAME2) $(OBJ) $(LIBPATH)$(LIB) $(CHECKER)

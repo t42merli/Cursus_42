@@ -6,7 +6,7 @@
 /*   By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/19 05:57:26 by tmerli            #+#    #+#             */
-/*   Updated: 2018/02/15 04:51:17 by tmerli           ###   ########.fr       */
+/*   Updated: 2018/02/26 15:13:35 by tmerli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,73 +39,50 @@ void	next_two(t_stack *stack, int *tab)
 	tab[1] = next_two;
 }
 
-void	setup(t_stack *a, int *next)
+void	setup(t_stack **a, t_stack **b, int *next, t_move *moves)
 {
-	if (a && a->next)
-		next_two(a, next);
-	if (stack_size(a) == 3)
+	if (*a && a[0]->next)
+		next_two(*a, next);
+	if (stack_size(*a) == 3)
 	{
-		if (a->nb == biggest(a))
-		{
-			rotate(&a);
-			ft_putendl("ra");
-		}
-		else if (last(a) == smallest(a))
-		{
-			reverse_rotate(&a);
-			ft_putendl("rra");
-		}
-		if (a->nb > a->next->nb)
-		{
-			swap(&a);
-			ft_putendl("sa");
-		}
+		if (a[0]->nb == biggest(*a))
+			do_move("ra", a, b, &moves);
+		else if (last(*a) == smallest(*a))
+			do_move("rra", a, b, &moves);
+		if (a[0]->nb > a[0]->next->nb)
+			do_move("sa", a, b, &moves);
 	}
 }
 
-void	push_back(t_stack *a, t_stack *b)
+void	push_back(t_stack **a, t_stack **b, t_move *moves)
 {
-	if (a && a->next && a->nb > a->next->nb)
+	if (*a && a[0]->next && a[0]->nb > a[0]->next->nb)
+		do_move("sa", a, b, &moves);
+	while (*b)
 	{
-		swap(&a);
-		ft_putendl("sa");
-	}
-	while (b)
-	{
-		push(&b, &a);
-		ft_putendl("pa");
-		if (a->nb > a->next->nb)
-		{
-			swap(&a);
-			ft_putendl("sa");
-		}
+		do_move("pa", a, b, &moves);
+		if (a[0]->nb > a[0]->next->nb)
+			do_move("sa", a, b, &moves);
 	}
 }
 
-void	small_sort(t_stack *a, t_stack *b)
+void	small_sort(t_stack **a, t_stack **b, t_move *moves)
 {
 	int next[2];
 
-	setup(a, next);
-	while (a && a->next && a->next->next && !sorted(a))
+	setup(a, b, next, moves);
+	while (*a && a[0]->next && a[0]->next->next && !sorted(*a))
 	{
-		if (a->nb == next[0] || a->nb == next[1])
+		if (a[0]->nb == next[0] || a[0]->nb == next[1])
 		{
-			push(&a, &b);
-			ft_putendl("pb");
-			if (b->nb == next[0] && a->next)
-				next_two(a, next);
-			if (b->next && b->next->nb > b->nb)
-			{
-				swap(&b);
-				ft_putendl("sb");
-			}
+			do_move("pb", a, b, &moves);
+			if (b[0]->nb == next[0] && a[0]->next)
+				next_two(*a, next);
+			if (b[0]->next && b[0]->next->nb > b[0]->nb)
+				do_move("sb", a, b, &moves);
 		}
 		else
-		{
-			rotate(&a);
-			ft_putendl("ra");
-		}
+			do_move("ra", a, b, &moves);
 	}
-	push_back(a, b);
+	push_back(a, b, moves);
 }

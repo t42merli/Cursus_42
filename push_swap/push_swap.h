@@ -6,7 +6,7 @@
 /*   By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 19:06:32 by tmerli            #+#    #+#             */
-/*   Updated: 2018/02/15 17:36:24 by tmerli           ###   ########.fr       */
+/*   Updated: 2018/02/26 14:57:02 by tmerli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void			do_move(char *move, t_stack **a, t_stack **b, t_move **moves);
 void			check_put(t_move *moves);
 int				move_stack(char *move, t_stack **stacka, t_stack **stackb);
 void			get_sort_b(t_stack **a, t_stack **b, t_move *moves);
-void			small_sort(t_stack *a, t_stack *b);
+void			small_sort(t_stack **a, t_stack **b, t_move *moves);
 void			get_sort_a(t_stack **a, t_stack **b, t_move *moves);
 t_stack			*get_stack(int argc, char **argv);
 int				ft_free(void **ptr);

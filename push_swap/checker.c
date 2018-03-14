@@ -6,7 +6,7 @@
 /*   By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 14:57:24 by tmerli            #+#    #+#             */
-/*   Updated: 2018/02/05 15:15:11 by tmerli           ###   ########.fr       */
+/*   Updated: 2018/02/28 00:50:40 by tmerli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,8 @@ void	do_sort(t_stack *stacka, int size)
 		ft_putendl("OK");
 	else if (!error)
 		ft_putendl("KO");
-	if (stacka)
-		free_stack(stacka);
-	if (stackb)
-		free_stack(stackb);
+	free_stack(stacka);
+	free_stack(stackb);
 }
 
 int		main(int argc, char *argv[])
@@ -52,10 +50,7 @@ int		main(int argc, char *argv[])
 			return (0);
 	}
 	else
-	{
-		ft_putendl("usage");
 		return (0);
-	}
 	do_sort(stack, argc);
 	return (0);
 }

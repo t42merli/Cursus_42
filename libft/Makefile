@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tmerli <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/11/09 16:38:31 by tmerli            #+#    #+#              #
-#    Updated: 2017/11/20 10:50:31 by tmerli           ###   ########.fr        #
+#    Created: 2018/03/14 12:32:50 by tmerli            #+#    #+#              #
+#    Updated: 2018/03/14 12:32:54 by tmerli           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,7 @@ SRC = ft_atoi.c\
 	  ft_memalloc.c\
 	  ft_memmove.c\
 	  ft_putnbr.c\
+	  ft_putnbrdl\
 	  ft_strclr.c\
 	  ft_striter.c\
 	  ft_strmapi.c\
@@ -72,6 +73,9 @@ SRC = ft_atoi.c\
 	  ft_strncat.c\
 	  ft_strrchr.c\
 	  ft_toupper.c\
+	  ft_abs.c\
+
+HEADER = libft.h
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -79,7 +83,7 @@ OBJ = $(SRC:.c=.o)
 
 all : $(NAME)
 
-$(NAME) : $(SRC)
+$(NAME) : $(SRC) $(HEADER)
 	gcc -c $(FLAGS) $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)

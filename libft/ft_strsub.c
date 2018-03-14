@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmerli <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: tmerli <tmerli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:02:50 by tmerli            #+#    #+#             */
-/*   Updated: 2017/11/16 13:08:24 by tmerli           ###   ########.fr       */
+/*   Updated: 2018/03/05 12:25:38 by tmerli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (!(str = ft_strnew(len)))
 		return (NULL);
-	ft_memmove(str, &s[start], len);
+	ft_memcpy(str, &s[start], len);
 	return (str);
 }
